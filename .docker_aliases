@@ -1,5 +1,5 @@
 # Docker aliases
 alias docker-rma="docker rm $(docker ps -aq)"
-alias socat="socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\""
+alias socatb2d="socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\\\"$DISPLAY\\\""
 alias http="docker run -it --rm --net=host clue/httpie"
 alias tor="docker run -e DISPLAY=192.168.59.3:0 jess/tor-browser"
