@@ -1,5 +1,8 @@
 # Docker aliases
 alias docker-rma="docker rm $(docker ps -aq)"
-alias socatb2d="socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\\\"$DISPLAY\\\""
-alias http="docker run -it --rm --net=host clue/httpie"
-alias tor="docker run -e DISPLAY=192.168.59.3:0 jess/tor-browser"
+# alias socatb2d="socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\\\"$DISPLAY\\\""
+alias httpie="docker run -it --rm --net=host clue/httpie"
+alias tor="docker run -e DISPLAY=192.168.99.1:0 jess/tor-browser && Xquartz &"
+alias telegram="docker run --rm -it -e DISPLAY=192.168.99.1:0 -v /Users/paolomainardi/.telegram:/root/.TelegramDesktop xorilog/telegram && Xquartz &"
+alias geary="docker run --rm -e DISPLAY=192.168.99.1:0 jess/geary && Xquartz &"
+alias htty="docker run --rm -it paolomainardi/docker-htty"
